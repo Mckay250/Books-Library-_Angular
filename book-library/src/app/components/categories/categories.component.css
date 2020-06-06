@@ -876,8 +876,6 @@ dl.row > dd + dt {
     margin: 0.5rem 0;
 }
 
-
-
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
 .btn-group .btn-group + .btn,
@@ -908,7 +906,6 @@ dl.row > dd + dt {
 .btn + .dropdown-toggle-split::after {
     margin-right: 0;
 }
-
 
 .btn-group-vertical > .btn + .btn,
 .btn-group-vertical > .btn + .btn-group,
@@ -971,8 +968,6 @@ dl.row > dd + dt {
     padding-right: 0;
 }
 
-
-
     .nav-tabs .nav-item + .nav-item {
         margin-right: 0.2rem;
     }
@@ -986,11 +981,6 @@ dl.row > dd + dt {
 .nav-stacked .nav-item + .nav-item {
     margin-right: 0;
 }
-
-
-
-
-
 
 
 .navbar-nav .nav-link + .nav-link {
@@ -1158,15 +1148,6 @@ dl.row > dd + dt {
     right: 100%;
 }
 
-/*.carousel-control {
-  right: 0;
-}
-
-.carousel-control.right {
-  left: 0;
-  right: auto;
-}*/
-
 .carousel-control .icon-prev {
     right: 50%;
     margin-right: -10px;
@@ -1204,13 +1185,6 @@ dl.row > dd + dt {
     }
 }
 
-
-
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
 
 body {
   overflow-x: hidden;
@@ -1258,8 +1232,6 @@ body {
   margin-right: 0px;
 }
 
-
-/* Sidebar Styles */
 
 .sidebar-nav {
   position: absolute;
