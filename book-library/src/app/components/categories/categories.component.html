@@ -1,0 +1,47 @@
+<nav class="navbar fixed-top navbar-expand navbar-dark bg-primary"> <span id="menu-toggle" class="navbar-brand">
+    <span class="navbar-toggler-icon pointer"></span></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation"> 
+        <span class="navbar-toggler-icon"></span> 
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+            <li class="nav-item"><a class="nav-link" routerLink="admin" >Admin</a></li>
+        </ul>
+        <form class="form-inline my-2 my-md-0"> </form>
+    </div>
+</nav>
+<div id="wrapper" class="toggled">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">Categories</li>
+            <li> <a href="#">category Name</a> </li>
+        </ul>
+    </div> 
+    <div id="page-content-wrapper">
+        <div class="container-fluid" style="padding-top: 3rem;">
+            <h1>Category Name</h1>
+
+            <div class="container-fluid row pr-0" style="margin-top: 4rem;">
+                
+                  <hr class="mt-0 pt-0">
+                  <ul class="row">
+                  <li class="col-sm-12 col-md-3 mx-md-0 mx-auto" *ngFor="let i of [1,2,3,4,5,6,7,8,9,0]">
+                    <div class="card justify-content-center mb-5 px-0">
+                      <div class="prod mx-auto justify-content-center">
+                        <div>
+                        <img src="" class="card-img-top newP" alt="...">
+                        </div>
+                      <div class="card-body text-center p-0">
+                        <h5 class="card-title m-0" style="font-size: smaller;">Book Name</h5>
+                        <a href="" download=""><p class="card-text" style="font-size: smaller;">Download Book</p></a>
+                      </div>
+                     </div>
+                    </div>
+                  </li>
+                  </ul>
+            </div>
+            
+        </div>
+    </div>
+</div> -->

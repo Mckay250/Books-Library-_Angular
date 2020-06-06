@@ -1,0 +1,68 @@
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="#" aria-label="Product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
+      <a class="py-2 d-none d-md-inline-block" routerLink="categories">Categories</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Blog</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Sign In</a>
+    </div>
+</nav>
+
+<section id="left">
+    <div class="container-fluid mb-5" style="margin-top: 7rem;">
+        <div class="container mt-0 mb-5 text-dark">
+          <h3>HELLO </h3>
+        </div>
+      
+          <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Add a Book
+                    </button>
+                  </h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+      
+                      <form class="was-validated">
+                          <span>Book Name</span>
+                          <div class="mb-3"><input class="input is-invalid" type="text" name="productName" placeholder="Product Name" required></div>
+                          <span>Price</span>
+                            <textarea class="is-invalid"  name="productDescription" id="validationTextarea" placeholder="Enter Product Description here" required></textarea>
+                        
+                          <div class="custom-control custom-radio">
+                            <input type="radio" class="custom-control-input"  id="customControlValidation2" name="radio-stacked" required>
+                            <label class="custom-control-label" for="customControlValidation2">Product is on Sale</label>
+                          </div>
+                          <div class="custom-control custom-radio mb-3">
+                            <input type="radio" class="custom-control-input" id="customControlValidation3" name="radio-stacked" required>
+                            <label class="custom-control-label" for="customControlValidation3">Product not on Sale</label>
+                            <div class="invalid-feedback">Is Product on Sale?</div>
+                          </div>
+                        
+                          <div class="form-group">
+                            <select class="custom-select"  name="selectedPostCategory" required>
+                              <option value="">Select a Category</option>
+                              <option ></option>
+                            </select>
+                            <div class="invalid-feedback">Please add a category</div>
+                          </div>
+      
+                          <button class="btn-primary submit radius" type="submit">Submit</button>
+                        
+                        </form>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</section>
+
+<section id="right">
+
+</section>

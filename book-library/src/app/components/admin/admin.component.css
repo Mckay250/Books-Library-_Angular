@@ -1,0 +1,9 @@
+button{
+    text-decoration: none !important;
+}
+.delete{
+    position: absolute;
+    right:20px;
+    background-color: rgb(212, 13, 13);
+    color: white;
+}
