@@ -1,4 +1,4 @@
-import { AuthComponent } from './components/auth/auth.component';
+import { CategoryComponent } from './components/category/category.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'auth', component: AuthComponent},
+  {path: 'categories', component: CategoryComponent},
   {path: '', component: HomeComponent},
 
 ];
