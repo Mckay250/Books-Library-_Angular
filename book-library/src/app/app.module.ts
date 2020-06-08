@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './services/auth.service';
 import { CategoryComponent } from './components/category/category.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CategoryComponent
+    CategoryComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
