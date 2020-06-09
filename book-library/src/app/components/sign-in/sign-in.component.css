@@ -1,0 +1,27 @@
+.card-parent{
+    display: flex;
+    width:90%;
+    margin: auto;
+}
+.grow{
+    flex-grow: 1;
+}
+.card-header{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card{
+    border-radius: 4px;
+    margin-right: 0em;
+    width: 25em;
+}
+.input{
+    border-radius: 4px;
+    border: solid 0.5px rgb(222, 223, 222);
+    width: 90%;
+    height: 2.4rem;
+}
+.submit{
+    height: 2.6rem;
+    width: 5rem;
+}

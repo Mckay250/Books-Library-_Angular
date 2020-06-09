@@ -1,1 +1,17 @@
-<p>book-list works!</p>
+<div id="list-component">    
+    <div class="item" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <div class="img-section">
+            <img src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2018/11/Screen-Shot-2018-12-28-at-9.14.54-AM.png?ssl=1" alt="book title">
+        </div>
+        <div class="info-section text-left">
+            <p class="title">Title</p>
+            <p class="author"> by author name</p>
+            <p class="description font-smaller">description Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ut?</p>
+        </div>
+        <div class="action-section">
+
+            <a class="btn btn-dark mb-2 text-white">Download</a>
+            <a class="btn btn-danger text-white">Add to favourites</a>
+        </div>
+    </div>
+</div>

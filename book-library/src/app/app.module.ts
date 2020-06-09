@@ -9,13 +9,23 @@ import { HomeComponent } from './home/home.component';
 import { AuthService } from './services/auth.service';
 import { CategoryComponent } from './components/category/category.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoryComponent,
-    BookListComponent
+    BookListComponent,
+    BookDetailComponent,
+    AuthComponent,
+    AdminComponent,
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
