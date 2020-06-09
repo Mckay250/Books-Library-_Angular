@@ -1,1 +1,27 @@
-<p>admin works!</p>
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2" href="#" aria-label="Product">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      </a>
+      <a class="py-2 d-none d-md-inline-block" routerLink = ''>Home</a>
+      <a class="py-2 d-none d-md-inline-block" [routerLink]="['/categories/1']">Categories</a>
+      <a class="py-2 d-none d-md-inline-block" >Admin</a>
+      <a class="py-2 d-none d-md-inline-block" [routerLink]="['/auth']">Log out</a>
+    </div>
+</nav>
+
+<div class="mt-4 mx-3">
+    <h5 class="text-center">Welcome Administrator</h5>
+</div>
+<div class="row">
+    <section class="col-5">
+        <button class="btn btn-sm btn-primary" (click)="route('addcategory')">Add a category</button>
+        <button class="btn btn-sm btn-primary" (click)="route('deletecategory')">Delete a category</button>
+        <button class="btn btn-sm btn-primary" (click)="route('addbook')">Add a Book</button>
+        <button class="btn btn-sm btn-primary" (click)="route('editbook')">Edit a Book</button>
+        <button class="btn btn-sm btn-primary" (click)="route('deletebook')">Delete a Book</button>
+    </section>
+    <section class="col-7">
+        <router-outlet></router-outlet>
+    </section>
+</div>

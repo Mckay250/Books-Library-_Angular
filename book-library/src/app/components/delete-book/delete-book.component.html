@@ -1,0 +1,9 @@
+<p>Select Category</p>
+ <select [(ngModel)]="selectedCategory" (change)="fetchBooks()">
+    <option *ngFor="let category of categoryService.categories" [ngValue]="category.name">{{category.name}}</option>
+</select>
+<p>Select Book</p>
+<select [(ngModel)]="selectedBook">
+    <option *ngFor="let book of books" [ngValue]="book.id">{{book.name}}</option>
+</select>
+<button (click)="deleteBook()" class="btn btn-sm btn-danger">Delete Book</button>

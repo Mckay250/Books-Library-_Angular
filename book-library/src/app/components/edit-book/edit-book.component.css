@@ -1,0 +1,16 @@
+input {
+    display: block;
+    margin: 5px 0;
+    padding: 2px 5px;
+}
+p {
+    font-size: 9pt;
+    margin: 0 0;
+}
+button {
+    margin: 1rem 0;
+    display: block;
+}
+select {
+    margin: 0 0 8px 0;
+}

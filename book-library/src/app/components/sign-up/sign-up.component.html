@@ -5,16 +5,18 @@
         <div class="card-body">
             <div>
                 <form>
-                    <div>Full Name <span style="color: red;">*</span></div>
-                    <input class="input" type="name"><br/><br/>
+                    <div>First Name <span style="color: red;">*</span></div>
+                    <input class="input px-3" [(ngModel)]="signUpForm.firstName" type="name"><br/><br/>
+                    <div>Last Name <span style="color: red;">*</span></div>
+                    <input class="input px-3" [(ngModel)]="signUpForm.lastName" type="name"><br/><br/>
                     <div>Email address <span style="color: red;">*</span></div>
-                    <input class="input" type="email"> <br/><br/>
+                    <input class="input px-3" [(ngModel)]="signUpForm.email" type="email"> <br/><br/>
                     <div>Password <span style="color: red;">*</span></div>
-                    <input class="input" type="password"><br/><br/>
+                    <input class="input px-3" [(ngModel)]="signUpForm.password" type="password"><br/><br/>
                     <button class="btn-primary submit radius" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <div class="card-footer text-muted">Have an account? <a routerLink='/signIn'>Sign In</a></div>
+        <div class="card-footer text-muted">Have an account? <a class="btn" (click)="signIn()">Sign In</a></div>
     </div>
 </div>

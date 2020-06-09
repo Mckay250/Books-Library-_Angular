@@ -1,0 +1,12 @@
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 2px 5px;
+}
+p {
+    font-size: 9pt;
+}
+button {
+    margin: 1rem 0;
+    display: block;
+}

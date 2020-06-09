@@ -1,0 +1,16 @@
+<div class="editBook">
+    <p>Select Category</p>
+    <select [(ngModel)]="bookForm.category" (change)="fetchBooks()">
+        <option *ngFor="let category of categoryService.categories" [ngValue]="category.name">{{category.id}}</option>
+    </select>
+    <p>Select Book</p>
+    <select [(ngModel)]="selectedBook" (change)="fetchBooks()">
+        <option *ngFor="let book of books" [ngValue]="book">{{book.name}}</option>
+    </select>
+    <input placeholder="Book name" type="text" [(ngModel)]="selectedBook.name" name="bookName">
+    <input placeholder="Book author" type="text" [(ngModel)]="selectedBook.author" name='author'>
+    <textarea  placeholder="Book description" type="text" [(ngModel)]="selectedBook.description" name='description'></textarea>
+    <input type="file" [(ngModel)]="selectedBook.cover" name='cover'>
+    <input type="file" [(ngModel)]="selectedBook.book" name='book'>
+    <button (click)="editBook()" class="btn btn-sm btn-success">Edit Book</button>
+</div>
