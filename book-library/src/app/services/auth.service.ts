@@ -8,12 +8,10 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   
-  private registerUrl = "http://localhost:1196/auth/addUser";
-  private loginUrl = "http://localhost:1196/authenticate";
+  
   private userData;
   public thisUser;
   jwt;
-  private _http: HttpClient;
   public httpOptions = {
       headers: new HttpHeaders({
         'Authorization' : this.jwt
@@ -24,35 +22,34 @@ export class AuthService {
                 private _router: Router) { 
                 }
 
-  setUser(user) {
-    this.userData = user
-  }
-
   getInitUser() {
     return this.userData;
   }
 
   registerUser(user) {
-    return this._http.post<any>(this.registerUrl, user);
+    return this.http.post<any>('http://localhost:1196/auth/addUser', user);
   }
 
-  loginUser(user) {
-    return (this._http.post<any>("http://localhost:1196/authenticate", user));
+  login(user) {
+    return (this.http.post<any>("http://localhost:1196/authenticate", user));
   }
 
-  getUser() {
-    return this.http.post<any>("http://localhost:1196/auth/getUser", this.userData);
+  getUser(userData) {
+    return this.http.post<any>("http://localhost:1196/auth/getUser", userData);
   }
 
   logoutUser() {
-    localStorage.removeItem('token')
+    localStorage.removeItem('bearer')
     localStorage.removeItem('User Role')
     this._router.navigate(['/auth'])
   }
 
   loggedIn() {
     return !!localStorage.getItem("token")
-    // return false;
+  }
+
+  isAdmin() {
+    return localStorage.getItem('role') === 'ADMIN'
   }
 
   getToken() {

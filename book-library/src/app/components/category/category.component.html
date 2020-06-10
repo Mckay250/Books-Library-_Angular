@@ -13,8 +13,8 @@
 <section class="container-fluid">
     <div id="navigation" class="container-fluid">
         <ul>
-            <li *ngFor="let item of [1,2,3,4,5]">
-                <a class="nav-btn btn btn-secondary py-0 px-2">item</a>
+            <li *ngFor="let category of categories">
+                <a (click)="getCategoryBooks(category.name)" class="nav-btn btn btn-secondary py-0 px-2">{{category.name}}</a>
             </li>
         </ul>
     </div>

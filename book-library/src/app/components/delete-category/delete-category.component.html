@@ -1,7 +1,7 @@
 <div class="add">
     <p>Select Category</p>
-    <select [(ngModel)]="selectedCategory" id="categories">
-        <option *ngFor="let category of categories" [ngValue]="category.name">{{category.name}}</option>
+    <select [(ngModel)]="selectedCategoryId" id="categories">
+        <option *ngFor="let category of categories" [ngValue]="category.id">{{category.name}}</option>
     </select>
     <button (click)=deleteCategory() class="btn btn-sm btn-danger">Delete Category</button>
 </div>

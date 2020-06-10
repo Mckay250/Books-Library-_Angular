@@ -1,3 +1,5 @@
+import { AuthenticationService } from './../../services/auth-service/authentication.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,9 +17,21 @@ export class SignUpComponent implements OnInit {
     password : '',
   };
 
-  constructor( private router: Router) { }
-
+  constructor( private router: Router,
+                private auth: AuthenticationService) {}
+                
   ngOnInit(): void {
+  }
+
+  signUp() {
+    this.auth.registerUser(this.signUpForm)
+      .subscribe(
+        res => {
+          alert(res);
+          this.signIn();
+        },
+        err => alert('there was an error submitting your details, try again!')
+      )
   }
 
   signIn() {

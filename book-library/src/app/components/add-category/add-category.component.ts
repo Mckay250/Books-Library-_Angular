@@ -1,3 +1,4 @@
+import { CategoryService } from './../../services/category-sevice/category.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,14 +11,19 @@ export class AddCategoryComponent implements OnInit {
   categoryForm = {
     name : ''
   }
+  catService
   
-  constructor() { }
+  constructor( private categoryService: CategoryService ) { }
 
   ngOnInit(): void {
   }
 
   addCategory() {
-    
+    this.categoryService.addCategory(this.categoryForm)
+      .subscribe(
+        res => alert('Category has been added'),
+        err => alert('There was an error adding the category')
+      )
   }
 
 }

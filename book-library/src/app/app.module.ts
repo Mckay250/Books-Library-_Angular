@@ -1,3 +1,5 @@
+import { AuthenticationService } from './services/auth-service/authentication.service';
+import { BookService } from './services/book-service/book.service';
 
 import { FormsModule } from '@angular/forms';
 import { CategoryService } from './services/category-sevice/category.service';
@@ -21,6 +23,7 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { DeleteBookComponent } from './components/delete-book/delete-book.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,9 +45,10 @@ import { DeleteBookComponent } from './components/delete-book/delete-book.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
   ],
-  providers: [AuthService, CategoryService],
+  providers: [CategoryService, BookService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

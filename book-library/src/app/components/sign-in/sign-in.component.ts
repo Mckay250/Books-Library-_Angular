@@ -1,3 +1,5 @@
+import { AuthenticationService } from './../../services/auth-service/authentication.service';
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,9 +15,26 @@ export class SignInComponent implements OnInit {
     password : '',
   }
 
-  constructor( private router: Router) { }
+  constructor( private router: Router,
+                private auth: AuthenticationService) { }
 
   ngOnInit(): void {
+  }
+
+  signIn() {
+    this.auth.login(this.signInForm)
+      .subscribe(
+        res => {
+          localStorage.setItem('bearer', res);
+            this.auth.getUser(this.signInForm)
+            .subscribe(
+              res => {
+                localStorage.setItem('role', res.role);
+                this.router.navigate(['home'])},
+                err => console.log(err)
+            )},
+        err => alert('incorect password or email, try again!')
+      )
   }
 
   signUp() {

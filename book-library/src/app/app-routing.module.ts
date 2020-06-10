@@ -1,4 +1,3 @@
-import { FormsModule } from '@angular/forms';
 
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';

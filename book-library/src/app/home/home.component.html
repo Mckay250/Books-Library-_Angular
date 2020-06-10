@@ -5,8 +5,9 @@
       </a>
       <a class="py-2 d-none d-md-inline-block" href="#">Home</a>
       <a class="py-2 d-none d-md-inline-block" routerLink="categories/1">Categories</a>
-      <a class="py-2 d-none d-md-inline-block" routerLink="admin">Admin</a>
-      <a class="py-2 d-none d-md-inline-block" routerLink="auth">Sign In</a>
+      <a *ngIf="isAdmin" class="py-2 d-none d-md-inline-block" routerLink="admin">Admin</a>
+      <a *ngIf="isLoggedIn" class="py-2 d-none d-md-inline-block" routerLink="auth">Sign In</a>
+      <a *ngIf="!isLoggedIn" class="py-2 d-none d-md-inline-block" routerLink="auth">Log Out</a>
     </div>
 </nav>
   
