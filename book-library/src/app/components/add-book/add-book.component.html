@@ -6,7 +6,7 @@
     <input placeholder="Book name" type="text" [(ngModel)]="bookForm.name" name="bookName">
     <input placeholder="Book author" type="text" [(ngModel)]="bookForm.author" name='author'>
     <textarea  placeholder="Book description" type="text" [(ngModel)]="bookForm.description" name='description'></textarea>
-    <input type="file" [(ngModel)]="bookForm.cover" name='cover'>
-    <input type="file" [(ngModel)]="bookForm.book" name='file'>
+    <input (change)="onCoverChange($event)" type="file" name='cover'>
+    <input type="file" (change)="onBookChange($event)" name='file'>
     <button (click)="addBook()" class="btn btn-sm btn-success">Add Category</button>
 </div>

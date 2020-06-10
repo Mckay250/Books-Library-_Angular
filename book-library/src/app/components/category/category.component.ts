@@ -1,9 +1,10 @@
-import { AuthService } from 'src/app/services/auth.service';
+
 import { BookListService } from './../../services/book-list-service/book-list.service';
 import { BookService } from './../../services/book-service/book.service';
 import { CategoryService } from './../../services/category-sevice/category.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/auth-service/authentication.service';
 
 @Component({
   selector: 'app-category',
@@ -22,7 +23,7 @@ export class CategoryComponent implements OnInit {
               private bookService: BookService,
               private route: ActivatedRoute,
               private booklist: BookListService,
-              private auth: AuthService) { }
+              private auth: AuthenticationService) { }
 
   ngOnInit(): void {
     this.isAdmin = this.auth.isAdmin();

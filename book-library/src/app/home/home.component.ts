@@ -1,4 +1,4 @@
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthenticationService } from './../services/auth-service/authentication.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   isAdmin = false;
   isLoggedIn = false;
 
-  constructor( private auth: AuthService) { }
+  constructor( private auth: AuthenticationService) { }
 
   ngOnInit(): void {
     this.isAdmin = this.auth.isAdmin();

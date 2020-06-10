@@ -30,6 +30,14 @@ export class AddBookComponent implements OnInit {
       )
   }
 
+  onCoverChange(event) {
+    this.bookForm.cover = event.target.files[0];
+  }
+
+  onBookChange(event) {
+    this.bookForm.book = event.target.files[0];
+  }
+
   addBook() {
     this.BookService.addBook(this.bookForm)
       .subscribe(
