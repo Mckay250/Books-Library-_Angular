@@ -1,11 +1,17 @@
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  httpOptions = {
+    headers : new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('bearer')}`
+    })
+  }
 
   constructor( private http: HttpClient,
                 private router: Router) { }
@@ -20,7 +26,7 @@ export class AuthenticationService {
   }
 
   getUser(userData) {
-    return this.http.post<any>("http://localhost:1196/auth/getUser", userData);
+    return this.http.post<any>("http://localhost:1196/auth/getUser", userData, this.httpOptions);
   }
 
   isAdmin() {

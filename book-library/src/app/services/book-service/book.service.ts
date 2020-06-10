@@ -1,10 +1,17 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
+
+
+ httpOptions = {
+   headers : new HttpHeaders({
+     'Authorization': `Bearer ${localStorage.getItem('bearer')}`
+   })
+ }
 
   constructor( private http: HttpClient) { }
 
@@ -16,7 +23,7 @@ export class BookService {
     newBookData.append('description', bookData.description);
     newBookData.append('author', bookData.author);
 
-    return this.http.post<any>(`http://localhost:1196/api/admin/${bookData.category}/addBook`, newBookData);
+    return this.http.post<any>(`http://localhost:1196/api/admin/${bookData.category}/addBook`, newBookData, this.httpOptions);
   }
 
   getBookByCategory(category) {
@@ -28,11 +35,11 @@ export class BookService {
   }
 
   deleteBookById(id) {
-    return this.http.get<any>(`http://localhost/1196/api/admin/deleteBook/${id}`);
+    return this.http.delete<any>(`http://localhost/1196/api/admin/deleteBook/${id}`, this.httpOptions);
   }
 
   updateBook(newBook) {
 
-    return this.http.get<any>('http://localhost/1196/api/admin/updateBook', newBook);
+    return this.http.put<any>('http://localhost/1196/api/admin/updateBook', newBook, this.httpOptions);
   }
 }

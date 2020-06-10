@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,28 +6,17 @@ import { Injectable } from '@angular/core';
 })
 export class CategoryService {
 
-  categories = [
-    {
-      id: 1,
-      name: 'comedy',
-      books: []
-    },
-    {
-      id: 2,
-      name: 'drama',
-      books: []
-    },
-    {
-      id: 3,
-      name: 'action',
-      books: []
-    }
-  ]
+  httpOptions = {
+    headers : new HttpHeaders({
+      'Authorization': `Bearer ${localStorage.getItem('bearer')}`
+    })
+  }
+
   
   constructor( private http: HttpClient) { }
 
   addCategory(category) {
-    return this.http.post<any>(`http://localhost:1196/api/admin/addCategory`, category);
+    return this.http.post<any>(`http://localhost:1196/api/admin/addCategory`, category, this.httpOptions);
   }
 
   getCategories() {
@@ -35,6 +24,6 @@ export class CategoryService {
   }
 
   deleteCategory(id) {
-    return this.http.delete<any>(`http://localhost:1196/api/admin/delete/${id}`);
+    return this.http.delete<any>(`http://localhost:1196/api/admin/delete/${id}`, this.httpOptions);
   }
 }
