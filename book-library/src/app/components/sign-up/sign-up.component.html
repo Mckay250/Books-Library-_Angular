@@ -13,7 +13,7 @@
                     <input class="input px-3" [(ngModel)]="signUpForm.email" type="email"> <br/><br/>
                     <div>Password <span style="color: red;">*</span></div>
                     <input class="input px-3" [(ngModel)]="signUpForm.password" type="password"><br/><br/>
-                    <button class="btn-primary submit radius" type="submit">Submit</button>
+                    <button (click)="signUp()" class="btn-primary submit radius" type="submit">Sign Up</button>
                 </form>
             </div>
         </div>

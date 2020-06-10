@@ -16,7 +16,7 @@
                     <input class="input px-3" [(ngModel)]="signInForm.email" type="email"> <br/><br/>
                     <p>Password <span style="color: red;">*</span></p>
                     <input class="input px-3" [(ngModel)]="signInForm.password" type="password"><br/><br/>
-                    <button class="btn-primary submit radius" type="submit">Submit</button>
+                    <button (click)="signIn()" class="btn-primary submit radius" type="submit">Sign In</button>
                 </form>
             </div>
         </div>
