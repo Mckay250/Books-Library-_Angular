@@ -10,7 +10,7 @@
     <input placeholder="Book name" type="text" [(ngModel)]="selectedBook.name" name="bookName">
     <input placeholder="Book author" type="text" [(ngModel)]="selectedBook.author" name='author'>
     <textarea  placeholder="Book description" type="text" [(ngModel)]="selectedBook.description" name='description'></textarea>
-    <input type="file" [(ngModel)]="selectedBook.cover" name='cover'>
-    <input type="file" [(ngModel)]="selectedBook.book" name='book'>
+    <input type="file" (click)="onCoverChange($event)" name='cover'>
+    <input type="file" (click)="onBookChange($event)" name='book'>
     <button (click)="editBook()" class="btn btn-sm btn-success">Edit Book</button>
 </div>

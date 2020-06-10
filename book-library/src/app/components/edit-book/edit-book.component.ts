@@ -41,6 +41,14 @@ export class EditBookComponent implements OnInit {
         err => console.log(err)
       )
   }
+
+  onCoverChange(event) {
+    this.selectedBook.cover = event.target.files[0];
+  }
+
+  onBookChange(event) {
+    this.selectedBook.book = event.target.files[0];
+  }
   
 
   editBook() {
