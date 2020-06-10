@@ -1,3 +1,4 @@
+import { BookListService } from './../../services/book-list-service/book-list.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public booklist: BookListService) { }
 
   ngOnInit(): void {
   }

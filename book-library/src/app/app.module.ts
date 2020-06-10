@@ -1,3 +1,4 @@
+import { BookListService } from './services/book-list-service/book-list.service';
 import { AuthenticationService } from './services/auth-service/authentication.service';
 import { BookService } from './services/book-service/book.service';
 
@@ -48,7 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CategoryService, BookService, AuthenticationService],
+  providers: [CategoryService, BookService, AuthenticationService, BookListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

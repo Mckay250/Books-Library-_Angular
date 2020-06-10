@@ -1,16 +1,17 @@
-<div id="list-component">    
-    <div class="item" *ngFor="let item of [1,2,3,4,5,6,7]">
+<div id="list-component">
+    <h4>{{booklist.categoryName}}</h4>
+    <div class="item" *ngFor="let book of booklist.books">
         <div class="img-section">
-            <img src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2018/11/Screen-Shot-2018-12-28-at-9.14.54-AM.png?ssl=1" alt="book title">
+            <img src="{{book.cover}}" alt="book cover image">
         </div>
         <div class="info-section text-left">
-            <p class="title">Title</p>
-            <p class="author"> by author name</p>
-            <p class="description font-smaller mt-4">description Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ut?</p>
+            <p class="title">{{book.name}}</p>
+            <p class="author"> {{book.author}}</p>
+            <p class="description font-smaller mt-4">{{book.description}}</p>
         </div>
         <div class="action-section">
 
-            <a class="btn btn-dark mb-2 text-white">Download</a>
+            <a href="{{book.book}}" download="{{book.name}}" class="btn btn-dark mb-2 text-white">Download</a>
             <a class="btn btn-danger text-white">Add to favourites</a>
         </div>
     </div>
